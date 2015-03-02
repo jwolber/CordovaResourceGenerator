@@ -141,7 +141,7 @@ namespace CordovaResourceGenerator
 				bmPhoto.SetResolution(logo.HorizontalResolution, logo.VerticalResolution);
 
 				Graphics grPhoto = Graphics.FromImage(bmPhoto);
-				grPhoto.Clear(Color.Black);
+				grPhoto.Clear(color.BackColor);
 				grPhoto.InterpolationMode = InterpolationMode.HighQualityBicubic;
 
 				grPhoto.DrawImage(logo, new Rectangle(destX, destY, destWidth, destHeight), new Rectangle(logoX, logoY, logoWidth, logoHeight), GraphicsUnit.Pixel);
