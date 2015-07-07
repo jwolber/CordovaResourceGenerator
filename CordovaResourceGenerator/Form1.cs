@@ -39,14 +39,18 @@ namespace CordovaResourceGenerator
 			resources.Add(new CordovaRes { Width = 96, Height = 96, Path = @"\res\icons\android\icon-96-xhdpi.png" });
 
 			//ANDROID SCREENS
-			resources.Add(new CordovaRes { Width = 960, Height = 720, Path = @"\res\screens\android\screen-xhdpi-landscape.png" });
-			resources.Add(new CordovaRes { Width = 720, Height = 960, Path = @"\res\screens\android\screen-xhdpi-portrait.png" });
-			resources.Add(new CordovaRes { Width = 640, Height = 480, Path = @"\res\screens\android\screen-hdpi-landscape.png" });
-			resources.Add(new CordovaRes { Width = 480, Height = 640, Path = @"\res\screens\android\screen-hdpi-portrait.png" });
-			resources.Add(new CordovaRes { Width = 470, Height = 320, Path = @"\res\screens\android\screen-mdpi-landscape.png" });
-			resources.Add(new CordovaRes { Width = 320, Height = 470, Path = @"\res\screens\android\screen-mdpi-portrait.png" });
-			resources.Add(new CordovaRes { Width = 426, Height = 320, Path = @"\res\screens\android\screen-ldpi-landscape.png" });
-			resources.Add(new CordovaRes { Width = 320, Height = 426, Path = @"\res\screens\android\screen-ldpi-portrait.png" });
+            //XHDPI
+			resources.Add(new CordovaRes { Width = 1280, Height = 720, Path = @"\res\screens\android\screen-xhdpi-landscape.png" });
+			resources.Add(new CordovaRes { Width = 720, Height = 1280, Path = @"\res\screens\android\screen-xhdpi-portrait.png" });
+            //HDPI
+			resources.Add(new CordovaRes { Width = 800, Height = 480, Path = @"\res\screens\android\screen-hdpi-landscape.png" });
+			resources.Add(new CordovaRes { Width = 480, Height = 800, Path = @"\res\screens\android\screen-hdpi-portrait.png" });
+            //MDPI
+			resources.Add(new CordovaRes { Width = 480, Height = 320, Path = @"\res\screens\android\screen-mdpi-landscape.png" });
+			resources.Add(new CordovaRes { Width = 320, Height = 480, Path = @"\res\screens\android\screen-mdpi-portrait.png" });
+            //LDPI
+			resources.Add(new CordovaRes { Width = 320, Height = 200, Path = @"\res\screens\android\screen-ldpi-landscape.png" });
+			resources.Add(new CordovaRes { Width = 200, Height = 320, Path = @"\res\screens\android\screen-ldpi-portrait.png" });
 
 			//IOS ICONS
 			resources.Add(new CordovaRes { Width = 114, Height = 114, Path = @"\res\icons\ios\icon-57-2x.png" });
@@ -65,20 +69,31 @@ namespace CordovaResourceGenerator
 			resources.Add(new CordovaRes { Width = 29, Height = 29, Path = @"\res\icons\ios\icon-small.png" });
 			resources.Add(new CordovaRes { Width = 58, Height = 58, Path = @"\res\icons\ios\icon-small-2x.png" });
 
-			//IOS SCREENS
-			resources.Add(new CordovaRes { Width = 1024, Height = 768, Path = @"\res\screens\ios\screen-ipad-landscape.png" });
-			resources.Add(new CordovaRes { Width = 2048, Height = 1536, Path = @"\res\screens\ios\screen-ipad-landscape-2x.png" });
-			resources.Add(new CordovaRes { Width = 768, Height = 1024, Path = @"\res\screens\ios\screen-ipad-portrait.png" });
-			resources.Add(new CordovaRes { Width = 1536, Height = 2048, Path = @"\res\screens\ios\screen-ipad-portrait-2x.png" });
-			resources.Add(new CordovaRes { Width = 640, Height = 1136, Path = @"\res\screens\ios\screen-iphone-568h-2x.png" });
-			resources.Add(new CordovaRes { Width = 2208, Height = 1242, Path = @"\res\screens\ios\screen-iphone-landscape-736h.png" });
-			resources.Add(new CordovaRes { Width = 320, Height = 480, Path = @"\res\screens\ios\screen-iphone-portrait.png" });
-			resources.Add(new CordovaRes { Width = 640, Height = 960, Path = @"\res\screens\ios\screen-iphone-portrait-2x.png" });
-			resources.Add(new CordovaRes { Width = 750, Height = 1134, Path = @"\res\screens\ios\screen-iphone-portrait-667h.png" });
-			resources.Add(new CordovaRes { Width = 1242, Height = 2208, Path = @"\res\screens\ios\screen-iphone-portrait-736h.png" });
+            //IOS SCREENS
+            //iPhone Non-Retina
+            resources.Add(new CordovaRes { Width = 480, Height = 320, Path = @"\res\screens\ios\screen-iphone-landscape.png" });
+            resources.Add(new CordovaRes { Width = 320, Height = 480, Path = @"\res\screens\ios\screen-iphone-portrait.png" });
+            //iPhone Retina
+            resources.Add(new CordovaRes { Width = 960, Height = 480, Path = @"\res\screens\ios\screen-iphone-landscape-2x.png" });
+            resources.Add(new CordovaRes { Width = 640, Height = 960, Path = @"\res\screens\ios\screen-iphone-portrait-2x.png" });
+            //iPhone 5 Retina
+            resources.Add(new CordovaRes { Width = 1136, Height = 640, Path = @"\res\screens\ios\screen-iphone-landscape-568h-2x.png" });
+            resources.Add(new CordovaRes { Width = 640, Height = 1136, Path = @"\res\screens\ios\screen-iphone-portrait-568h-2x.png" });
+            //iPhone 6
+            resources.Add(new CordovaRes { Width = 1334, Height = 750, Path = @"\res\screens\ios\screen-iphone-landscape-667h.png" });
+            resources.Add(new CordovaRes { Width = 750, Height = 1334, Path = @"\res\screens\ios\screen-iphone-portrait-667h.png" });
+            //iPhone 6Plus
+            resources.Add(new CordovaRes { Width = 2208, Height = 1242, Path = @"\res\screens\ios\screen-iphone-landscape-736h.png" });
+            resources.Add(new CordovaRes { Width = 1242, Height = 2208, Path = @"\res\screens\ios\screen-iphone-portrait-736h.png" });
+            //iPad Non-Retina
+            resources.Add(new CordovaRes { Width = 1024, Height = 768, Path = @"\res\screens\ios\screen-ipad-landscape.png" });
+            resources.Add(new CordovaRes { Width = 768, Height = 1024, Path = @"\res\screens\ios\screen-ipad-portrait.png" });
+            //iPad Retina
+            resources.Add(new CordovaRes { Width = 2048, Height = 1536, Path = @"\res\screens\ios\screen-ipad-landscape-2x.png" });
+            resources.Add(new CordovaRes { Width = 1536, Height = 2048, Path = @"\res\screens\ios\screen-ipad-portrait-2x.png" });
 
-			//WINDOWS 8 ICONS
-			resources.Add(new CordovaRes { Width = 62, Height = 62, Path = @"\res\icons\wp8\ApplicationIcon.png" });
+            //WINDOWS 8 ICONS
+            resources.Add(new CordovaRes { Width = 62, Height = 62, Path = @"\res\icons\wp8\ApplicationIcon.png" });
 			resources.Add(new CordovaRes { Width = 173, Height = 173, Path = @"\res\icons\wp8\Background.png" });
 
 			//WINDOWS 8 SCREENS
