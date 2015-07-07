@@ -152,11 +152,18 @@ namespace CordovaResourceGenerator
 				int destWidth = (int)(logoWidth * nPercent);
 				int destHeight = (int)(logoHeight * nPercent);
 
-				Bitmap bmPhoto = new Bitmap(Width, Height, PixelFormat.Format24bppRgb);
+				Bitmap bmPhoto = new Bitmap(Width, Height, PixelFormat.Format32bppArgb);
 				bmPhoto.SetResolution(logo.HorizontalResolution, logo.VerticalResolution);
 
 				Graphics grPhoto = Graphics.FromImage(bmPhoto);
-				grPhoto.Clear(color.BackColor);
+                if (transparentBG.Checked)
+                {
+                    grPhoto.Clear(Color.Transparent);
+                }
+                else
+                {
+                    grPhoto.Clear(color.BackColor);
+                }
 				grPhoto.InterpolationMode = InterpolationMode.HighQualityBicubic;
 
 				grPhoto.DrawImage(logo, new Rectangle(destX, destY, destWidth, destHeight), new Rectangle(logoX, logoY, logoWidth, logoHeight), GraphicsUnit.Pixel);
@@ -208,5 +215,20 @@ namespace CordovaResourceGenerator
 				logoPath.Text = openFileDialog.FileName;
 			}
 		}
-	}
+
+        private void transparentBG_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (transparentBG.Checked)
+            {
+                color.Hide();
+                colorBtn.Enabled = false;
+            }
+            else
+            {
+                color.Show();
+                colorBtn.Enabled = true;
+            }
+        }
+    }
 }
